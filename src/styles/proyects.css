@@ -1,0 +1,290 @@
+/*componente container*/
+.proyects{
+    width: 100%;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 3rem;
+}
+
+.slider{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.proyect{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    background: var(--dark);
+    padding: 0 3rem;
+    height: 500px;
+}
+
+.proyect .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*title, text and button container*/
+.content .body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content h2{
+    font-family: var(--volume);
+    font-size: clamp(2rem, -0.2905rem + 3.5754vw, 4rem);
+    font-weight: 600;
+    color: var(--light);
+}
+
+.content .line{
+    width: 50px;
+    height: 2px;
+    background: var(--main);
+}
+
+.content p{
+    max-width: 650px;
+    font-family: var(--small);
+    font-size: clamp(1.4rem, 1.0564rem + 0.5363vw, 1.7rem);
+    color: var(--light);
+}
+
+.content a{
+    text-decoration: none;
+    font-family: var(--volume);
+    font-size: clamp(1.3rem, 1.0709rem + 0.3575vw, 1.5rem);
+    color: var(--main);
+    border: 2px solid var(--main);
+    padding: 0.5rem 1.1rem;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all ease-in-out 0.3s;
+}
+
+/*hover effect*/
+.content a:hover{
+    transition: all ease-in-out 0.3s;
+    background: var(--main);
+    color: var(--light);
+}
+
+/*aside container*/
+.proyect aside{
+    width: 680px;
+    height: auto;
+}
+
+/*proyect image*/
+.proyect aside img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*button next container*/
+.slider-next{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/*next button*/
+.next-btn{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--main);
+    cursor: pointer;
+}
+
+/*next*/
+.next-btn h4{
+    font-family: var(--volume);
+    font-size: clamp(3rem, 0rem + 3.3333vw, 4rem);
+    font-weight: 500;
+    color: #ffffff;
+    transform: rotate(-90deg);
+}
+
+/*aside columns*/
+.slider-next .col-2{
+    background: var(--main);
+    height: 500px;
+    width: 50px;
+}
+
+.slider-next .col-3{
+    background: var(--main);
+    height: 500px;
+    width: 25px;
+}
+
+
+/*responsive desing*/
+@media (max-width: 1650px){
+    
+    .proyect aside{
+        width: 600px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1440px){
+
+    .proyects{
+        padding-right: 1.5rem;
+    }
+
+    .proyect{
+        padding: 0 1.5rem;
+        gap: 1rem;
+    }
+
+    .proyect aside{
+        max-width: 550px;
+        width: 550px;
+        height: auto;
+    }
+
+    .slider{
+        gap: 1rem;
+    }
+
+    .slider-next{
+        gap: 0.5rem;
+    }
+
+}
+
+@media (max-width: 1250px){
+
+    .content p{
+        max-width: 450px;
+    }
+
+    .slider-next .col-2{
+        width: 30px;
+    }
+
+    .slider-next .col-3{
+        width: 15px;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .proyects{
+        padding: 3rem 0;
+        padding-right: 0;
+    }
+
+    .slider{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .slider-next{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .next-btn{
+        height: 70px;
+        flex-direction: row;
+    }
+
+    .next-btn h4{
+        transform: rotate(0deg);
+    }
+
+    .slider-next .col-2{
+        display: none;
+    }
+
+    .slider-next .col-3{
+        display: none;
+    }
+}  
+
+
+@media (max-width: 768px){
+
+    .proyect{
+        height: 100%;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+    }
+
+    .content{
+        max-width: 100%;
+        padding: 0 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .body{
+        min-height: 350px;
+    }
+
+    .content p{
+        max-width: 100%;
+    }
+
+    .proyect aside{
+        max-width: 100%;
+        width: 100%;
+        height: 350px;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .proyect{
+        padding-bottom: 3rem;
+    }
+    
+    .body{
+        min-height: 300px;
+    }
+
+    .proyect aside{
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .proyects{
+        min-height: 100vh;
+        padding: 3rem 0;
+        padding-bottom: 0;
+        align-items: center;
+    }
+    
+    .proyect{
+        padding: 0;
+    }
+
+    .content{
+        padding: 0 1rem;
+        padding-bottom: 1rem;
+    }
+
+}

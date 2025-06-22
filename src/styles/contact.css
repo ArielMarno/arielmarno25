@@ -1,0 +1,190 @@
+/*component container*/
+.contact{
+    width: 100%;
+    min-height: 60svh;
+    padding-top: 3rem;
+    background-image: url('../assets/bg.webp');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+/*aside container*/
+.contact aside{
+    padding-top: 1.5rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*arm image container*/
+.contact picture{
+    max-width: 800px;
+    height: auto;
+}
+
+/*arm image*/
+.contact picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*dev name, frontent, email and icons container*/
+.contact-content{
+    min-height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.contact-content .content{
+    min-height: 100%;
+    justify-self: flex-end;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem 3rem;
+}
+
+/*dev name*/
+.contact-content h2{
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+/*frontend*/
+.contact-content h4{
+    color: var(--main);
+    font-family: var(--volume);
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+/*email*/
+.contact-content h5{
+    color: var(--silver);
+    font-family: var(--volume);
+    font-size: 1.7rem;
+    font-weight: 100;
+}
+
+/*icons container*/
+.content-icons{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*links*/
+.content-icons a{
+    border: none;
+    padding: 0;
+}
+
+.content-icons a:hover{
+    background: none;
+}
+
+/*icons*/
+.contact-icon img{
+    max-width: 60px;
+    height: auto;
+}
+
+.contact-icon-git img{
+    max-width: 68px;
+}
+
+
+/*responsive desing*/
+@media(max-width: 1440px){
+
+    .contact-content h2{
+        font-size: clamp(2.5rem, -0.3571rem + 5.9524vw, 5rem);
+    }
+
+    .contact-content h4{
+        font-size: clamp(1.5rem, -0.2143rem + 3.5714vw, 3rem);
+    }
+
+    .contact-content h5{
+        font-size: clamp(1.3rem, 0.8429rem + 0.9524vw, 1.7rem);
+    }
+}
+
+@media(max-width: 1025px){
+    
+    .contact aside{
+        justify-content: center;
+    }
+
+    .contact-icon img{
+        max-width: 50px;
+        height: auto;
+    }
+
+    .contact-icon-git img{
+        max-width: 58px;
+    }
+}
+
+@media(max-width: 768px){
+    
+    .contact{
+        background: var(--main);
+        padding-top: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .contact aside{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .contact aside picture{
+        max-width: 300px;
+        height: auto;
+    }
+
+    .contact-content{
+        width: 100%;
+    }
+
+    .contact-content .content{
+        align-items: center;
+    }
+}
+
+@media(max-width: 600px){
+    
+    .contact .content{
+        min-height: 450px;
+    }
+
+}
+
+@media(max-width: 480px){
+
+    .contact aside picture{
+        max-width: 200px;
+        height: auto;
+    }
+}

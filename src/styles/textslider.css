@@ -1,0 +1,35 @@
+/*main container*/
+.text-slider {
+    position: relative;
+    overflow: hidden;
+    height: clamp(3rem, -3rem + 6.6667vw, 5rem);
+    width: auto;
+}
+
+/*text*/
+.text-item {
+    font-family: var(--volume);
+    font-size: clamp(3rem, -3rem + 6.6667vw, 5rem);
+    font-weight: 500;
+    color: var(--main);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/*change opacity with visible class is activated*/
+.text-item.visible {
+    opacity: 1;
+}
+
+
+/*responsive desing*/
+@media (max-width: 768px){
+
+    .text-slider{
+        height: 45px;
+    }
+    .text-item{
+        font-size: clamp(2.5rem, 2.0103rem + 2.0619vw, 3rem);
+    }
+}

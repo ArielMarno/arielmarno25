@@ -1,0 +1,146 @@
+/*component container*/
+.navbar{
+    width: 100%;
+    background: transparent;
+    height: 100px;
+    padding: 0 4rem;
+    padding-top: 2.5rem;
+}
+
+/*main container*/
+.navbar main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*dev name*/
+.navbar-name h4{
+    font-family: var(--volume);
+    font-size: 2rem;
+    font-weight: 550;
+    color: var(--dark);
+}
+
+/*links container*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+/*links*/
+nav a{
+    text-decoration: none;
+    font-family: var(--small);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dark);
+    transition: all ease-in-out 0.3s;
+}
+
+/*hover effect*/
+nav a:hover{
+    color: var(--main);
+    transition: all ease-in-out 0.3s;
+}
+
+/*inglish-español switch*/
+nav section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+nav section a{
+    font-size: 1.5rem;
+}
+
+/*current page*/
+nav section a:first-child{
+    color: var(--main);
+    font-weight: 600;
+}
+
+nav section a:last-child:hover{
+    color: var(--main);
+    font-weight: 600;
+    transition: ease-in-out all 0.3s;
+}
+
+nav section p{
+    font-family: var(--volume);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/*responsive menu*/
+.burguer{
+    display: none;
+}
+
+
+/*responsive desing*/
+@media (max-width: 1250px){
+    
+    .navbar{
+        padding: 0 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .navbar{
+        padding: 1rem;
+        background: var(--dark);
+        position: fixed;
+        top: 0;
+        min-width: 100%;
+        z-index: 999;
+    }
+
+    .navbar-name h4{
+        color: var(--light);
+    }
+
+    nav a, nav section p{
+        color: var(--light);
+    }
+
+    /*show menu*/
+    .burguer{
+        display: flex;
+    }
+
+    /*hide and active menu with .open class linked to funtion onClick*/
+    .menu{
+        position: fixed;
+        transform: translateX(-100%); 
+        transition: transform 0.3s initial;
+        top: 0;
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /*open menu*/
+    .menu.open {
+        background: var(--dark);
+        z-index: 1000;
+        transform: translateX(0);
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        left: 0;
+        top: 100px;
+    }
+}

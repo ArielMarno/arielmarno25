@@ -1,0 +1,106 @@
+/*main container*/
+.belt{
+    background: var(--main);
+    height: 100vh;
+    width: 400px;
+    min-width: fit-content;
+    overflow: hidden;
+}
+
+/*image size*/
+.tech{
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 173px;
+    /*translate image infinite*/
+    animation: scroll 30s linear infinite;
+    -webkit-animation: scroll 30s linear infinite;
+    height: calc(1143px * 6);
+}
+
+/*image for responsive desing*/
+.tech-rsp{
+    display: none;
+}
+
+/*animation*/
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(calc(-1143px * 3));
+        transform: translateY(calc(-1143px * 3));
+    }
+}
+
+/*responsive desing*/
+@media (max-width: 1660px){
+
+    .belt {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1440px){
+
+    .belt {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1250px){
+
+    .belt {
+        width: 250px;
+        
+    }
+}
+
+@media (max-width: 1025px){
+
+    .belt{
+        height: 90px;
+        min-width: 100%;
+        padding: 0.5rem 0;
+        overflow: hidden;
+    }
+
+    /*hide image for destock*/
+    .tech{
+        display: none;
+    }
+
+    .tech-rsp{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 173px;
+        animation: scroll 40s linear infinite;
+        -webkit-animation: scroll 40s linear infinite;
+        width: calc(1143px * 6);
+    }
+
+    /*show image for responsive desing*/
+    .tech-rsp img{
+        width: 100%;
+    }
+
+    /*adapted animation for responsive*/
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-1143px * 3));
+            transform: translateX(calc(-1143px * 3));
+        }
+    }
+}
